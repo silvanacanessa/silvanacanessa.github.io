@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <p>&#9632; exercise 1</p>
+        <p>jjkjkn jnjkn  nn j n njknkjnjk jnknkjnkj kjnjknkjn oijoiuuiy dededrerd ytyhiouoip uyguygj uhhu uhjkuyuyg j uyh joiiooiouiu g ui ijo io iuh io oiiiu </p>
+    </header>
+   
+    <section id="accordion-sec">
+      <button class="accordion">My dad's conspiracy theories</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">from witch to nympho zine</button>
+<div class="panel">
+  <p>I created a zine last semester about witches and nymphomaniacs and how those two concepts connect. I would like to put it on a website so people can read it and learn about some crazy history.</p>
+</div>
+
+<button class="accordion hover-img">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion hover-img">Section 4</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion hover-img">Section 5</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+</section>
+</main>
+
+<footer class="scroll-container"><h1 class="scroll-text">blaaaaaaaaaaaaaaa</h1></h1></footer>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,159 @@
+@import url("https://use.typekit.net/koe3zoc.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: #cc3000;
+  color: #ff5a28;
+}
+
+body {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 3vw;
+  font-size: 2.5vw;
+}
+
+header :first-child {
+  width: 55%;
+}
+
+header :nth-child(2) {
+  width: 45%;
+  text-align: justify;
+}
+
+header {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+#accordion-sec {
+  margin-bottom: 100px;
+}
+
+.accordion {
+  font-family: "acumin-pro", sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #cc3000;
+  color: #ff5a28;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.hover-img a {
+  position: relative;
+}
+
+.hover-img a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+
+.hover-img a:hover span {
+  display: block;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ff5a28;
+  color: #cc3000;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #cc3000;
+  border: 1px solid;
+  display: none;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '+';
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "-";
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  white-space: nowrap;
+  font-size: 40px;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+}
+
+h1 {
+  /* font-family: mencken-std-head-compress, sans-serif; */
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  padding: o;
+}
+
+/* scrolling text code from chatgpt */
+.scroll-container {
+  overflow: hidden;
+  /* Hide the overflow */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  position: relative;
+  width: 100%;
+  /* Full width container */
+}
+
+.scroll-text {
+  font-weight: 400;
+  display: inline-block;
+  animation: scroll-animation 45s linear infinite;
+  /* Smooth infinite scrolling */
+}
+
+@keyframes scroll-animation {
+  from {
+    transform: translateX(-1%);
+    /* Start position */
+  }
+
+  to {
+    transform: translateX(-100%);
+    /* Move out completely */
+  }
+}

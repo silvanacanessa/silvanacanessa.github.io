@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Horoscope Generator</title>
+</head>
+<body>
+    <!-- Form Section -->
+    <div id="form-section">
+        <h1>Get Your Horoscope</h1>
+        <form id="horoscope-form">
+            <!-- Question 1: Birthday -->
+            <label for="birthday">When is your birthday?</label><br>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+
+            <!-- Question 2: What are you looking for? -->
+            <label>What are you looking for?</label><br>
+            <input type="radio" id="guidance" name="purpose" value="guidance" required>
+            <label for="guidance">Guidance</label><br>
+            <input type="radio" id="inspiration" name="purpose" value="inspiration">
+            <label for="inspiration">Inspiration</label><br>
+            <input type="radio" id="problem-solving" name="purpose" value="problem-solving">
+            <label for="problem-solving">Problem-Solving</label><br><br>
+
+            <!-- Question 3: Do you believe in astrology? -->
+            <label>Do you believe in astrology?</label><br>
+            <input type="radio" id="yes" name="belief" value="yes" required>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="belief" value="no">
+            <label for="no">No</label><br>
+            <input type="radio" id="dont-know" name="belief" value="i don't know yet">
+            <label for="dont-know">I don't know yet</label><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Get Horoscope</button>
+        </form>
+    </div>
+
+    <!-- Horoscope Reveal Section -->
+    <div id="horoscope-section" style="display: none;">
+        <h2>Your Horoscope</h2>
+        <p id="zodiac-sign"></p>
+        <img id="horoscope-image" src="" alt="Horoscope Image" style="max-width: 200px;"><br><br>
+        <p id="belief-text"></p>
+        <button id="action-button"></button>
+    </div>
+    <script src="js/js.js"></script>
+</body>
+</html>
