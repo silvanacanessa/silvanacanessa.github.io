@@ -29,6 +29,7 @@
     width: 300px;
   height: 200px; 
   background-color: rgb(255, 0, 170);
+  /* star shape from chatgpt */
   clip-path: polygon(
     50% 0%, /* Top point */
     61% 35%, /* Right upper point */
