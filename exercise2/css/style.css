@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+
+  h1{
+    font-size: 10vw;
+    font-family: 'Arial Narrow';
+  }
+  main{
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 300px;
+  height: 200px; 
+  background-color: rgb(255, 0, 170);
+  clip-path: polygon(
+    50% 0%, /* Top point */
+    61% 35%, /* Right upper point */
+    98% 35%, /* Right lower point */
+    68% 57%, /* Bottom right point */
+    79% 91%, /* Bottom point */
+    50% 70%, /* Bottom left point */
+    21% 91%, /* Left lower point */
+    32% 57%, /* Left upper point */
+    2% 35%, /* Left upper point */
+    39% 35% /* Right upper point */)
+  }
+
