@@ -10,6 +10,15 @@
     height: 100%;
   }
 
+  #links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+    gap: 50px;
+  }
+
   #text_links, #img_links {
     width: 70vw;
     margin: 0 auto;
@@ -21,3 +30,23 @@
     width: 100px;
     height: 100px;
   }
+
+.cursor {
+  background: url('../img/hand.png') center/contain no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.cursor-eye {
+  background: url('../img/eye.svg') center/contain no-repeat;
+  width: 90px;
+  height: 90px;
+}
+
+.cursor-colour {
+  background: rgb(253, 45, 191);
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+}
+
