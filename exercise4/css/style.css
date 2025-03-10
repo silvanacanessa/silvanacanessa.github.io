@@ -8,6 +8,8 @@
   body, html {
     width: 100%;
     height: 100%;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   #links{
@@ -20,7 +22,7 @@
   }
 
   #text_links, #img_links {
-    width: 70vw;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -31,22 +33,31 @@
     height: 100px;
   }
 
-.cursor {
-  background: url('../img/hand.png') center/contain no-repeat;
+/* Base Cursor */
+.cursor_base {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 40px;
   height: 40px;
+  background: url('../img/hand.svg') center/contain no-repeat;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, background 0.1s ease-in-out;
 }
 
-.cursor-eye {
+/* Eye Cursor */
+.cursor_base.cursor_eye {
   background: url('../img/eye.svg') center/contain no-repeat;
   width: 90px;
   height: 90px;
 }
 
-.cursor-colour {
-  background: rgb(253, 45, 191);
-  width: 30px;
-  height: 30px;
+/* Color Cursor */
+.cursor_base.cursor_colour {
+  background: rgba(253, 45, 191, 1);
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
 }
 

@@ -1,29 +1,30 @@
-const cursor = document.querySelector('.cursor');
-const images = document.querySelectorAll('#img_links a, #img_links img'); // Target <a> and <img>
+const cursor = document.querySelector('.cursor_base'); 
+const images = document.querySelectorAll('#img_links img');
 const links = document.querySelectorAll('#text_links a');
 
+// Move cursor with mouse
 document.addEventListener('mousemove', (e) => {
     const x = e.clientX;
     const y = e.clientY;
     cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
 });
 
-// Change cursor to eye when hovering over images or their links
-images.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        cursor.classList.add('cursor-eye');
+// Change to eye cursor when hovering over images
+images.forEach(img => {
+    img.addEventListener('mouseover', () => {
+        cursor.classList.add('cursor_eye');
     });
-    item.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-eye');
+    img.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor_eye');
     });
 });
 
-// Change cursor color when hovering over text links
+// Change to color cursor when hovering over links
 links.forEach(link => {
     link.addEventListener('mouseover', () => {
-        cursor.classList.add('cursor-colour');
+        cursor.classList.add('cursor_colour');
     });
     link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-colour');
+        cursor.classList.remove('cursor_colour');
     });
 });
