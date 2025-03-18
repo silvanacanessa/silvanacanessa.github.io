@@ -30,6 +30,7 @@ h6 {
     font-weight: 400;
     font-style: italic;
     font-feature-settings: "swsh";
+    line-height: 110%;
 }
 
 nav {
@@ -69,10 +70,9 @@ nav ul {
 
 main {
     width: 90vw;
-    height: 100vh;
+    height: 90vh;
     margin: 0 auto;
     display: flex;
-
 }
 
 main .left-col {
@@ -81,8 +81,12 @@ main .left-col {
 }
 
 main .right-col {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
     width: 66.666%;
+    gap: 20px;
+    justify-content: flex-end;
 }
 
 .img-grid {
@@ -95,9 +99,7 @@ main .right-col {
 
 .img-grid img {
     flex-shrink: 1;
-    /* Allows items to shrink if necessary */
     min-width: 0;
-    /* Ensures items can shrink past their content size */
 }
 
 .cursors {
