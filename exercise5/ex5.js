@@ -1,50 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
     const imgGrid = document.querySelector(".img-grid");
-    let floatingImage = null;
+    let floatingWrapper = null;
 
     // Define images corresponding to each clicked image
     const imageMap = {
-        "image-1": "img/img1.jpg",
-        "image-2": "img/img2.jpg",
-        "image-3": "img/img3.jpg",
-        "image-4": "img/img4.jpg",
-        "image-5": "img/img5.jpg",
+        "image-1": "img/asset1.png",
+        "image-2": "img/asset2.png",
+        "image-3": "img/asset3.png",
+        "image-4": "img/asset4.png",
+        "image-5": "img/asset5.png",
     };
 
     imgGrid.addEventListener("click", (event) => {
         if (event.target.tagName === "IMG") {
             // Remove existing floating image if one exists
-            if (floatingImage) {
-                floatingImage.remove();
+            if (floatingWrapper) {
+                floatingWrapper.remove();
             }
 
-            // Create new floating image
-            floatingImage = document.createElement("img");
-            floatingImage.src = imageMap[event.target.id];
-            floatingImage.style.position = "absolute";
-            floatingImage.style.pointerEvents = "none"; // Prevents interfering with mouse events
-            floatingImage.style.width = "300px"; // Adjust size as needed
-            floatingImage.style.height = "auto";
-            document.body.appendChild(floatingImage);
+            // Create a wrapper div for the floating image
+            floatingWrapper = document.createElement("div");
+            floatingWrapper.classList.add("floating-wrapper");
 
-            // Move image with cursor
+            // Create the floating image
+            const floatingImage = document.createElement("img");
+            floatingImage.src = imageMap[event.target.id];
+            floatingImage.classList.add("floating-image");
+
+            floatingWrapper.appendChild(floatingImage);
+            document.body.appendChild(floatingWrapper);
+
+            // Immediately position the floating image at the mouse click location
+            floatingWrapper.style.left = `${event.pageX + 10}px`;
+            floatingWrapper.style.top = `${event.pageY + 10}px`;
+
+            // Move the floating wrapper with the cursor
             document.addEventListener("mousemove", moveFloatingImage);
         }
     });
 
     function moveFloatingImage(event) {
-        if (floatingImage) {
-            floatingImage.style.left = `${event.pageX + 10}px`;
-            floatingImage.style.top = `${event.pageY + 10}px`;
+        if (floatingWrapper) {
+            floatingWrapper.style.left = `${event.pageX + 10}px`;
+            floatingWrapper.style.top = `${event.pageY + 10}px`;
         }
     }
 
-    // Remove floating image when clicking outside the img-grid images
+    // Remove floating image when clicking outside the img-grid
     document.addEventListener("click", (event) => {
         if (!event.target.closest(".img-grid")) {
-            if (floatingImage) {
-                floatingImage.remove();
-                floatingImage = null;
+            if (floatingWrapper) {
+                floatingWrapper.remove();
+                floatingWrapper = null;
                 document.removeEventListener("mousemove", moveFloatingImage);
             }
         }

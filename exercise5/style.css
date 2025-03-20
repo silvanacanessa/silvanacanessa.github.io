@@ -95,6 +95,7 @@ main .right-col {
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow: hidden;
+    filter: grayscale(1);
 }
 
 .img-grid img {
@@ -116,4 +117,22 @@ main .right-col {
 
 img {
     width: 100px;
+}
+
+.floating-wrapper {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    backdrop-filter: blur(3px); /* Creates the blur effect behind the image */
+    background-color: rgba(237, 235, 224, 0.2); /* #EDEBE0 at 20% opacity */
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #EDEBE0;
+}
+
+.floating-image {
+    display: block;
+    width: 250px; /* Adjust size as needed */
+    height: auto;
+    mix-blend-mode: multiply; /* Ensures the PNG transparency blends nicely */
 }
