@@ -123,8 +123,8 @@ img {
     position: absolute;
     pointer-events: none;
     z-index: 1000;
-    backdrop-filter: blur(3px); /* Creates the blur effect behind the image */
-    background-color: rgba(237, 235, 224, 0.2); /* #EDEBE0 at 20% opacity */
+    backdrop-filter: blur(3px);
+    background-color: rgba(237, 235, 224, 0.2);
     padding: 10px;
     display: inline-block;
     border: 1px solid #EDEBE0;
@@ -132,7 +132,7 @@ img {
 
 .floating-image {
     display: block;
-    width: 250px; /* Adjust size as needed */
+    width: 250px;
     height: auto;
-    mix-blend-mode: multiply; /* Ensures the PNG transparency blends nicely */
+    mix-blend-mode: multiply;
 }

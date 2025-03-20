@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const imgGrid = document.querySelector(".img-grid");
     let floatingWrapper = null;
 
-    // Define images corresponding to each clicked image
     const imageMap = {
         "image-1": "img/asset1.png",
         "image-2": "img/asset2.png",
@@ -13,16 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     imgGrid.addEventListener("click", (event) => {
         if (event.target.tagName === "IMG") {
-            // Remove existing floating image if one exists
             if (floatingWrapper) {
                 floatingWrapper.remove();
             }
 
-            // Create a wrapper div for the floating image
+            // container div for the floating image
             floatingWrapper = document.createElement("div");
             floatingWrapper.classList.add("floating-wrapper");
 
-            // Create the floating image
+            // create floating image
             const floatingImage = document.createElement("img");
             floatingImage.src = imageMap[event.target.id];
             floatingImage.classList.add("floating-image");
@@ -30,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
             floatingWrapper.appendChild(floatingImage);
             document.body.appendChild(floatingWrapper);
 
-            // Immediately position the floating image at the mouse click location
+            // position floating image at mouse location
             floatingWrapper.style.left = `${event.pageX + 10}px`;
             floatingWrapper.style.top = `${event.pageY + 10}px`;
 
-            // Move the floating wrapper with the cursor
+            // move floating container with cursor
             document.addEventListener("mousemove", moveFloatingImage);
         }
     });
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Remove floating image when clicking outside the img-grid
+    // remove floating image when clicking outside img-grid
     document.addEventListener("click", (event) => {
         if (!event.target.closest(".img-grid")) {
             if (floatingWrapper) {
