@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: "Crimson Pro", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    background: #EDEBE0;
+}
+
+.spread {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.page {
+    width: 50%;
+    padding: 5vw;
+}
+
+.left-page {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    background: #EDEBE0;
+    height: 100vh;
+}
+
+.left-page img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.right-page {
+    background-color: #180E11;
+    color: #EDEBE0;
+    padding: 5vw;
+    margin-left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+h2{
+    font-weight: 500;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(22, 21, 21, 0.1); /* semi-transparent */
+    backdrop-filter: blur(10px); /* this does the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* safari support */
+    padding: 10px 0;
+    z-index: 1000; /* make sure it stays on top */
+  }
+  
+  nav ul {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #E50973;
+    font-size: 18px;
+  }
+
+  nav a:hover{
+    filter: blur(2px);
+  }
+
+/* IMAGE SLIDER */
+
+.image-container {
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.caption {
+    margin: 0 auto;
+    color: #180E11;
+    font-size: 16px;
+    border-radius: 5px;
+    max-width: 80%;
+    text-align: center;
+}
+
+
+.slider {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider img {
+    max-width: 80%;
+    height: auto;
+    transition: 0.2s ease-in-out;
+}
+
+button {
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+    color: #180E11;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+}
+
+#nextBtn {
+    right: 30px;
+}
+#prevBtn {
+    left: 30px;
+    transform: rotate(180deg) translateY(50%);
+}
+
+ol a:link{
+    color: #EDEBE0;
+}
